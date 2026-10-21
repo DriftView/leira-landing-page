@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/*
+ * Brand tokens, kept in step with Leira_health_Mobile/constants/theme.ts
+ * ("Cadence" palette). Outfit throughout, as in the app.
+ */
+@theme {
+  --font-sans: "Outfit Variable", "Outfit", system-ui, sans-serif;
+
+  --color-ink: #1c1113;
+  --color-ink-line: #3a2c2f;
+  --color-ink-muted: #c9bcbe;
+  --color-crimson: #d91e29;
+  --color-crimson-deep: #b5121b;
+  --color-crimson-ink: #ff8a90;
+  --color-blush: #fbedec;
+  --color-blush-strong: #f6dcda;
+  --color-line: #f3dedd;
+  --color-line-strong: #e9d3d2;
+  --color-body: #5e5154;
+  --color-subtle: #75676a;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Anchor jumps land below the sticky header. */
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Outfit has no italic; emphasis in headings is carried by colour instead. */
+em {
+  font-style: normal;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
