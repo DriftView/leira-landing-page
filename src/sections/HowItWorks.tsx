@@ -21,18 +21,18 @@ const STEPS = [
 export function HowItWorks() {
   return (
     <section id="how" className="bg-blush">
-      <div className="mx-auto flex max-w-[1240px] flex-col gap-14 px-4 py-28 sm:px-8">
+      <div className="mx-auto flex max-w-[1240px] flex-col gap-8 px-4 py-16 sm:gap-14 sm:px-8 sm:py-28">
         <div className="flex max-w-[640px] flex-col gap-3.5">
           <Eyebrow>How Leira works</Eyebrow>
           <SectionHeading>
             From every heartbeat to <em>guidance you can act on.</em>
           </SectionHeading>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-3 sm:gap-5">
           {STEPS.map((s) => (
-            <div key={s.n} className="flex flex-col gap-4 rounded-[28px] bg-white p-8">
-              <div className="text-[44px] leading-none font-semibold tracking-[-.03em] text-crimson">{s.n}</div>
-              <h3 className="m-0 text-[22px] font-semibold tracking-[-.01em]">{s.title}</h3>
+            <div key={s.n} className="flex flex-col gap-3 rounded-[24px] bg-white p-6 sm:gap-4 sm:rounded-[28px] sm:p-8">
+              <div className="text-[36px] leading-none font-semibold tracking-[-.03em] text-crimson sm:text-[44px]">{s.n}</div>
+              <h3 className="m-0 text-[20px] font-semibold tracking-[-.01em] sm:text-[22px]">{s.title}</h3>
               <p className="m-0 text-base leading-[1.55] text-pretty text-body">{s.body}</p>
             </div>
           ))}

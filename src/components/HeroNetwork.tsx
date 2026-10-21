@@ -227,7 +227,7 @@ export function HeroNetwork() {
   }, []);
 
   return (
-    <div className="relative mx-auto h-[clamp(460px,58vw,680px)] max-w-[1400px]" aria-hidden="true">
+    <div className="relative mx-auto h-[clamp(380px,58vw,680px)] max-w-[1400px]" aria-hidden="true">
       <canvas ref={canvasRef} className="absolute inset-0 block size-full" />
       {labelsOn && (
         <>

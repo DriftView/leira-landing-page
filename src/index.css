@@ -27,6 +27,33 @@ html {
   scroll-padding-top: 72px;
 }
 
+/*
+ * Phone-width swipe row: a grid on larger screens, a horizontal snap
+ * carousel below `sm` so long card lists don't become a wall of scrolling.
+ * Children get `.swipe-item`. Inside a padded container, pair it with
+ * `max-sm:-mx-4 max-sm:px-4` so cards can scroll out to the screen edge.
+ */
+@utility swipe-row {
+  @media (width < 40rem) {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    scroll-padding-inline: 1rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@utility swipe-item {
+  @media (width < 40rem) {
+    flex: none;
+    width: 82%;
+    scroll-snap-align: start;
+  }
+}
+
 body {
   margin: 0;
   background: #ffffff;

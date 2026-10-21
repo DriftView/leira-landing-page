@@ -7,11 +7,11 @@ const STORES = [
 export function Download() {
   return (
     <section id="download" className="bg-blush">
-      <div className="mx-auto flex max-w-[900px] flex-col items-center gap-6 px-4 py-28 text-center sm:px-8">
+      <div className="mx-auto flex max-w-[900px] flex-col items-center gap-5 px-4 py-16 text-center sm:gap-6 sm:px-8 sm:py-28">
         <h2 className="m-0 text-[clamp(38px,5.2vw,66px)] leading-[1.02] font-semibold tracking-[-.035em] text-balance">
           Start learning <em className="text-crimson">your heart.</em>
         </h2>
-        <p className="m-0 max-w-[540px] text-lg leading-[1.55] text-body">
+        <p className="m-0 max-w-[540px] text-base leading-[1.55] text-body sm:text-lg">
           Connect your wearable in minutes. Leira works with the devices you already own.
         </p>
         <div className="flex flex-wrap justify-center gap-3">

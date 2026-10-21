@@ -20,7 +20,7 @@ const AUDIENCE = [
 export function WhoShouldJoin() {
   return (
     <section id="who" className="bg-ink text-white">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] items-start gap-14 px-4 py-28 sm:px-8">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] items-start gap-10 px-4 py-16 sm:gap-14 sm:px-8 sm:py-28">
         <div className="flex flex-col gap-[18px]">
           <Eyebrow className="text-crimson-ink">Who should join</Eyebrow>
           <SectionHeading accent="[&_em]:text-crimson-ink">
@@ -40,18 +40,18 @@ export function WhoShouldJoin() {
             src={members}
             alt="A diverse group of Leira members"
             credit="Photo by Eli Ayeke on Unsplash"
-            className="mt-6 h-[380px] rounded-[28px] bg-ink-line"
+            className="mt-4 h-[260px] rounded-[24px] bg-ink-line sm:mt-6 sm:h-[380px] sm:rounded-[28px]"
           />
         </div>
         <ol className="m-0 flex list-none flex-col p-0">
           {AUDIENCE.map((a, i) => (
             <li
               key={a.title}
-              className="grid grid-cols-[28px_minmax(0,1fr)] gap-3.5 border-t border-ink-line py-5 last:border-b"
+              className="grid grid-cols-[24px_minmax(0,1fr)] gap-3 border-t border-ink-line py-4 last:border-b sm:grid-cols-[28px_minmax(0,1fr)] sm:gap-3.5 sm:py-5"
             >
               <span className="text-[20px] leading-none font-semibold text-crimson-ink">{i + 1}</span>
               <div className="flex flex-col gap-1">
-                <span className="text-[17px] font-semibold">{a.title}</span>
+                <span className="text-[16px] font-semibold sm:text-[17px]">{a.title}</span>
                 <span className="text-sm leading-normal text-ink-muted">{a.body}</span>
               </div>
             </li>

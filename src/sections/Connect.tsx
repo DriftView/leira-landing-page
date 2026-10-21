@@ -26,7 +26,7 @@ const TOUCHPOINTS = [
 export function Connect() {
   return (
     <section id="connect" className="bg-white">
-      <div className="mx-auto flex max-w-[1240px] flex-col gap-12 px-4 pt-28 sm:px-8">
+      <div className="mx-auto flex max-w-[1240px] flex-col gap-8 px-4 pt-16 sm:gap-12 sm:px-8 sm:pt-28">
         <div className="flex max-w-[680px] flex-col gap-3.5">
           <Eyebrow>How it connects to you</Eyebrow>
           <SectionHeading>
@@ -35,7 +35,7 @@ export function Connect() {
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] border-t border-line">
           {TOUCHPOINTS.map((t) => (
-            <div key={t.title} className="flex flex-col gap-2.5 border-b border-line py-7 pr-7">
+            <div key={t.title} className="flex flex-col gap-2 border-b border-line py-5 pr-4 sm:gap-2.5 sm:py-7 sm:pr-7">
               <div className="flex items-center gap-2.5 text-[13px] font-semibold text-crimson">
                 <span className="size-2 rounded-full bg-crimson" />
                 {t.when}

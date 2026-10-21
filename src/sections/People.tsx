@@ -28,11 +28,11 @@ const PEOPLE = [
 export function People() {
   return (
     <section className="bg-white">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-5 px-4 pb-28 sm:px-8">
+      <div className="swipe-row mx-auto max-w-[1240px] sm:grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-3 px-4 pb-16 sm:gap-5 sm:px-8 sm:pb-28">
         {PEOPLE.map((p) => (
-          <figure key={p.caption} className={`m-0 flex flex-col gap-3.5 ${p.offset ? "md:pt-12" : ""}`}>
-            <Photo src={p.src} alt={p.alt} credit={p.credit} className="h-[440px] rounded-[28px] bg-blush" />
-            <figcaption className="text-[20px] leading-[1.3] font-medium tracking-[-.01em]">{p.caption}</figcaption>
+          <figure key={p.caption} className={`swipe-item m-0 flex flex-col gap-3.5 ${p.offset ? "md:pt-12" : ""}`}>
+            <Photo src={p.src} alt={p.alt} credit={p.credit} className="h-[360px] rounded-[24px] bg-blush sm:h-[440px] sm:rounded-[28px]" />
+            <figcaption className="text-[17px] leading-[1.3] font-medium tracking-[-.01em] sm:text-[20px]">{p.caption}</figcaption>
           </figure>
         ))}
       </div>

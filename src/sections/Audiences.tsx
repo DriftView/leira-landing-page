@@ -25,16 +25,16 @@ function AudienceCard({
   photo: { src: string; alt: string; credit: string };
 }) {
   return (
-    <div id={id} className={`flex flex-col gap-[22px] rounded-[32px] p-8 text-white sm:p-11 ${surface}`}>
+    <div id={id} className={`flex flex-col gap-4 rounded-[28px] p-6 text-white sm:gap-[22px] sm:rounded-[32px] sm:p-11 ${surface}`}>
       <Photo
         {...photo}
-        className={`-mx-4 -mt-4 mb-1.5 h-[300px] rounded-[22px] sm:-mx-7 sm:-mt-7 ${photoBg}`}
+        className={`-mx-3 -mt-3 mb-1 h-[220px] rounded-[20px] sm:-mx-7 sm:-mt-7 sm:mb-1.5 sm:h-[300px] sm:rounded-[22px] ${photoBg}`}
       />
       <Eyebrow className={eyebrowClass}>{eyebrow}</Eyebrow>
       <h2 className="m-0 text-[clamp(30px,3.4vw,44px)] leading-[1.08] font-semibold tracking-[-.025em] text-balance [&_em]:opacity-80">
         {heading}
       </h2>
-      <ul className="m-0 flex list-none flex-col gap-3.5 p-0 text-base leading-[1.45]">
+      <ul className="m-0 flex list-none flex-col gap-3 p-0 text-[15px] leading-[1.45] sm:gap-3.5 sm:text-base">
         {points.map((p) => (
           <li key={p} className="flex gap-3">
             <span className={`mt-2 size-1.5 flex-none rounded-full ${dot}`} />
@@ -49,7 +49,7 @@ function AudienceCard({
 export function Audiences() {
   return (
     <section className="bg-white">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-5 px-4 py-28 sm:px-8">
+      <div className="mx-auto grid max-w-[1240px] grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-3 px-4 py-16 sm:gap-5 sm:px-8 sm:py-28">
         <AudienceCard
           id="you"
           surface="bg-crimson"

@@ -60,24 +60,24 @@ const CASES = [
 export function UseCases() {
   return (
     <section id="use-cases" className="bg-white">
-      <div className="mx-auto flex max-w-[1240px] flex-col gap-12 px-4 pt-24 pb-28 sm:px-8">
+      <div className="mx-auto flex max-w-[1240px] flex-col gap-8 px-4 pt-16 pb-16 sm:gap-12 sm:px-8 sm:pt-24 sm:pb-28">
         <div className="flex max-w-[640px] flex-col gap-3.5">
           <Eyebrow>Best use cases</Eyebrow>
           <SectionHeading>
             Built for the moments <em>hearts need watching.</em>
           </SectionHeading>
         </div>
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-5">
+        <div className="swipe-row sm:grid grid-cols-[repeat(auto-fit,minmax(min(300px,100%),1fr))] gap-3 max-sm:-mx-4 max-sm:px-4 sm:gap-5">
           {CASES.map((c) => (
-            <article key={c.tag} className="flex flex-col gap-3.5 rounded-[28px] bg-blush p-8">
+            <article key={c.tag} className="swipe-item flex flex-col gap-3 rounded-[24px] bg-blush p-6 sm:gap-3.5 sm:rounded-[28px] sm:p-8">
               <Photo
                 src={c.src}
                 alt={c.alt}
                 credit={c.credit}
-                className="-mx-5 -mt-5 mb-1.5 h-[220px] rounded-[20px] bg-blush-strong"
+                className="-mx-3 -mt-3 mb-1.5 h-[190px] rounded-[18px] bg-blush-strong sm:-mx-5 sm:-mt-5 sm:h-[220px] sm:rounded-[20px]"
               />
               <div className="text-xs font-semibold tracking-[.12em] text-crimson-deep uppercase">{c.tag}</div>
-              <h3 className="m-0 text-[24px] leading-[1.15] font-semibold tracking-[-.015em]">{c.title}</h3>
+              <h3 className="m-0 text-[21px] leading-[1.15] font-semibold tracking-[-.015em] sm:text-[24px]">{c.title}</h3>
               <p className="m-0 text-[15px] leading-[1.55] text-pretty text-body">{c.body}</p>
             </article>
           ))}
