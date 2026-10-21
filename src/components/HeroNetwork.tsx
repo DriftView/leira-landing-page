@@ -4,13 +4,13 @@ import { LeiraMark } from "@/components/ui";
 // Signal nodes around the Leira AI core, as % of the stage. `ins` feed the
 // core, `outs` are where guidance leaves it. Labels and canvas strings share
 // these anchors, so moving one here moves both.
-const INPUTS: { x: number; y: number; label: string; guideline?: boolean }[] = [
+const INPUTS = [
   { x: 13, y: 20, label: "Heart rate" },
   { x: 8, y: 47, label: "Blood pressure" },
   { x: 14, y: 78, label: "Sleep" },
   { x: 31, y: 9, label: "ECG rhythm" },
   { x: 31, y: 91, label: "Activity" },
-  { x: 62, y: 8, label: "Latest clinical guidelines", guideline: true },
+  { x: 62, y: 8, label: "Latest clinical guidelines" },
   { x: 62, y: 92, label: "Medication" },
 ];
 const OUTPUTS = [
@@ -95,24 +95,13 @@ function buildNetwork(W: number, H: number): Network {
   return { strands, links, cx, cy, W, H };
 }
 
-function SignalPill({ x, y, label, guideline }: { x: number; y: number; label: string; guideline?: boolean }) {
+function SignalPill({ x, y, label }: { x: number; y: number; label: string }) {
   return (
     <div
-      className={
-        "absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 whitespace-nowrap rounded-full px-3.5 py-2 text-[13px] font-medium " +
-        (guideline
-          ? "bg-ink text-white"
-          : "border border-line bg-white shadow-[0_10px_24px_-16px_rgba(150,20,30,.5)]")
-      }
+      className="absolute flex -translate-x-1/2 -translate-y-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-line bg-white px-3.5 py-2 text-[13px] font-medium shadow-[0_10px_24px_-16px_rgba(150,20,30,.5)]"
       style={{ left: `${x}%`, top: `${y}%` }}
     >
-      {guideline ? (
-        <svg width="12" height="12" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M5 3h10l4 4v14H5z" fill="none" stroke="#FFFFFF" strokeWidth="2" />
-        </svg>
-      ) : (
-        <span className="size-[7px] rounded-full bg-crimson" />
-      )}
+      <span className="size-[7px] rounded-full bg-crimson" />
       {label}
     </div>
   );
