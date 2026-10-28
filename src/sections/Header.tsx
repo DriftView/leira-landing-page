@@ -5,6 +5,7 @@ const NAV = [
   { href: "#how", label: "How it works" },
   { href: "#use-cases", label: "Use cases" },
   { href: "#who", label: "Who it’s for" },
+  { href: "https://blog.leirahealth.com", label: "Blog" },
 ];
 
 export function Header() {
