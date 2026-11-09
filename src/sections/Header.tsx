@@ -2,9 +2,9 @@ import { useState } from "react";
 import { LeiraMark } from "@/components/ui";
 
 const NAV = [
-  { href: "#how", label: "How it works" },
-  { href: "#use-cases", label: "Use cases" },
-  { href: "#who", label: "Who it’s for" },
+  { href: "/#how", label: "How it works" },
+  { href: "/#use-cases", label: "Use cases" },
+  { href: "/#who", label: "Who it’s for" },
   { href: "https://blog.leirahealth.com", label: "Blog" },
 ];
 
@@ -23,13 +23,13 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <a href="#top" onClick={close} className="flex items-center gap-2 text-ink" aria-label="Leira home">
+        <a href="/#top" onClick={close} className="flex items-center gap-2 text-ink" aria-label="Leira home">
           <LeiraMark height={30} className="sm:h-[34px] sm:w-[22px]" />
           <span className="text-[22px] leading-none font-semibold tracking-[-.02em] sm:text-[26px]">Leira</span>
         </a>
         <div className="flex items-center justify-end gap-2">
           <a
-            href="#download"
+            href="/#download"
             onClick={close}
             className="flex h-10 items-center rounded-full bg-ink px-4 text-[13px] font-semibold whitespace-nowrap text-white transition-colors hover:bg-crimson sm:h-[42px] sm:px-5 sm:text-sm"
           >
