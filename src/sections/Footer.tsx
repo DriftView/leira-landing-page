@@ -12,7 +12,15 @@ export function Footer() {
           Leira provides wellness guidance and does not replace professional medical advice. In an emergency, call your
           local emergency number.
         </span>
-        <span>© {new Date().getFullYear()} Leira Health</span>
+        <span className="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <a href="/privacy-policy" className="transition-colors hover:text-crimson">
+            Privacy Policy
+          </a>
+          <a href="/delete-account" className="transition-colors hover:text-crimson">
+            Delete account
+          </a>
+          <span>© {new Date().getFullYear()} Leira Health</span>
+        </span>
       </div>
     </footer>
   );
