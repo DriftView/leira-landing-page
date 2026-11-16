@@ -1,3 +1,5 @@
+import { SignupForm } from "@/components/SignupForm";
+
 // TODO: swap in the real store listing URLs once the app is published.
 const STORES = [
   { href: "#", pre: "Download on the", name: "App Store" },
@@ -26,6 +28,8 @@ export function Download() {
             </a>
           ))}
         </div>
+        <p className="m-0 mt-4 text-sm font-medium text-body">Get launch updates</p>
+        <SignupForm />
       </div>
     </section>
   );
