@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
             <li>
               <strong>Service providers</strong> that process data for us under confidentiality obligations: cloud
               hosting and database providers; Anthropic (AI chat responses); Groq (voice-note transcription); Twilio
-              (SMS); an email delivery provider; Expo (push notifications); Cloudinary (file and image storage); and the
+              (SMS); an email delivery provider and EmailOctopus (our launch-updates mailing list, which receives only the details you submit in the sign-up form on our website); Expo (push notifications); Cloudinary (file and image storage); and the
               wearable providers you connect (Apple, Google, Fitbit).
             </li>
             <li>
