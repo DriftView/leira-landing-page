@@ -5,7 +5,6 @@ export function Footer() {
   return (
     <footer className="border-t border-line bg-white">
       <div className="mx-auto flex max-w-[1240px] flex-col items-center gap-3 px-4 pt-10 text-center sm:px-8">
-        <p className="m-0 text-[15px] font-semibold text-ink">Get launch updates</p>
         <SignupForm />
       </div>
       <div className="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-4 px-4 py-8 text-[13px] text-subtle sm:gap-5 sm:px-8 sm:py-9">
